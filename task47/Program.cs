@@ -9,10 +9,16 @@
 Console.Write("Введите количество строк: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите количество столбцов: ");
+Console.Write("Введите количество cтолбцов: ");
 int columns = Convert.ToInt32(Console.ReadLine());
 
-double[,] result = GetMatrix(rows, columns, 0.0, 10.0);
+Console.Write("Введите минимальное значение элемента: ");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите максимальное значение элемента: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+double[,] result = GetMatrix(rows, columns, min, max);
 
 PrintMatrix(result, 1);
 

@@ -15,7 +15,13 @@ int rows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество cтолбцов: ");
 int columns = Convert.ToInt32(Console.ReadLine());
 
-int[,] result = GetMatrix(rows, columns, 0, 10);
+Console.Write("Введите минимальное значение элемента: ");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите максимальное значение элемента: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[,] result = GetMatrix(rows, columns, min, max);
 
 PrintMatrix(result, 0);
 
@@ -49,8 +55,6 @@ void PrintMatrix(int[,] matrix, int decimalPlaces)
 
 void GetNumber(int[,] matrix)
 {
-    int getNumber = result[0, 0];
-
     Console.Write("Введите номер строки: ");
     int userRow = Convert.ToInt32(Console.ReadLine()) - 1;
 
